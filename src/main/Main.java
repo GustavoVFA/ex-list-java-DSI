@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-    /* Scanner grava = new Scanner(System.in);
-       int valor;
+         Scanner grava = new Scanner(System.in);
+      /* int valor;
         System.out.println("Digite um valor");
         valor = grava.nextInt();
         
@@ -34,7 +34,7 @@ public class Main {
         }else{
             System.out.println("Categoria Adulto");
         }
-        */
+        
     
         Scanner grava = new Scanner(System.in);
         
@@ -89,8 +89,48 @@ public class Main {
            else if(esc == 3){
                System.out.println("Saindo do Sistema");
            }
-    }    
+           
+           int vp, vt, res;
+           
+           System.out.println("informe a velocidade permitida na via: ");
+           vp = grava.nextInt();
+           System.out.println("Informe a velocidade no momento: ");
+           vt = grava.nextInt();
+           
+           if(vp > vt){
+               System.out.println("Voce esta abaixo da velocidade maxima nao teve multas");
+           }  
+               res = vt - vp;
+               if(res <= 10){
+                   System.out.println("Voce estava "+ res +"km acima da velocidade permitida, \n"
+                           + "voce será multado em R$80,00");
+               }else if(res > 10 && res <= 39){
+                   System.out.println("Voce estava "+ res +"km acima da velocidade permitida, \n"
+                           + "voce será multado em R$120,00");
+           }
+               else if(res >= 40){
+                   System.out.println("Voce estava "+ res +"km acima da velocidade permitida, \n"
+                           + "voce será multado em R$200,00");
+               }
+*/
+      double sal, res;
+        System.out.println("Informe seu salario:");
+        sal = grava.nextDouble();
+        res = sal - (sal*0.02);
+        res = res - (res*0.06);
+        res = res - (res*0.07);
+        
+        if(res > 1200.00){
+            res = res - (res*0.15);
+            System.out.printf("%.2f\n",res);
+        }else{
+            System.out.printf("%.2f\n não ouve desconto", res);
+        }
 }
+}
+
+            
+
     
     
     
