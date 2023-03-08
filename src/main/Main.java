@@ -65,6 +65,30 @@ public class Main {
         else if(escolha == 4){
             System.out.println("Saindo do Sistema");
         }
+         
+        int esc;
+        double valor, valor1;
+        String msg;
+        System.out.println("Digite a opção desejada \n"
+                + "[1] - veja a mensagem \n"
+                + "[2] - tire 10% do valor desejado \n"
+                + "[3] - sair \n");
+        esc = grava.nextInt();
+           if(esc == 1){
+               System.out.println("digite a mensagem");
+               msg = grava.next();
+               System.out.println(msg);
+        }
+           else if(esc == 2){
+               System.out.println("digite o valor desejado: ");
+               valor = grava.nextDouble();
+               System.out.println("10% de "+ valor+ " é:"+ valor*0.1);
+               valor1 = valor - (valor*0.1);
+               System.out.println("o valor sem 10% é: " + valor1);
+           }
+           else if(esc == 3){
+               System.out.println("Saindo do Sistema");
+           }
     }    
 }
     
